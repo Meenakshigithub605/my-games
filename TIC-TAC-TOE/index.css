@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg,rgba(15, 202, 239,0.5),rgba(224, 238, 240,0.4),rgba(95, 144, 242,0.6))no-repeat center center/cover;
+}
+nav{
+    background-color: black;
+    color: white;
+    height: 82px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    list-style: none;
+}
+.gamecontainer{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.container{
+
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+}
+.box{
+    border-style:solid ;
+    border-width: 2px;
+    border-image: linear-gradient(45deg,rgba(230, 14, 122, 0.904),rgba(230, 200, 228,0.4),rgba(219, 16, 212, 0.996))1;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+   background: linear-gradient(45deg,rgba(213, 211, 211,0.5),rgba(247, 128, 166, 0.984),rgba(232, 91, 232,0.5));
+}
+.gameinfo{
+    padding: 0 34px;
+}
+.gameinfo h1{
+    font-size: 2.5rem;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+} 
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    padding :10px;
+    margin:10px 20px ;
+    background:linear-gradient(45deg,rgba(230, 14, 122, 0.904),rgba(230, 200, 228,0.4),rgba(219, 16, 212, 0.996));
+    border-radius: 12px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+}
+.info{
+    font-size: 20px;
+    font-weight: 200;
+}
+.line{
+    background-color: rgb(72, 26, 239);
+    width: 0;
+    height: 3px;
+    position:absolute;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width:800px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 30px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+
+}

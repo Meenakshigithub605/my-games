@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangMan </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scriptjs/script.js" defer type="module"></script>
+    <script src="scriptjs/wordlist.js" defer type="module"></script>
+</head>
+
+<body>
+    <div class="game-modal">
+        <div class="content">
+            <img src="img/cat.gif" alt="lost">
+            <h4>Game Over!!!!!!!</h4>
+            <p>The Correct word was :<b>Dronzer</b></p>
+            <button class="play-again">
+                Play Again
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hangman-box">
+            <img src="img/hangman-0.svg" alt="Hangman-img">
+            <h1>HangMan Game</h1>
+        </div>
+        <div class="game-box">
+            <ul class="worddisplay">
+            </ul>
+            <h4 class="hinttext">
+                Hint:
+                <b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, perspiciatis voluptatibus.
+                    Exercitationem quod molestiae sapiente saepe voluptate? Hic consequuntur voluptate necessitatibus
+                    enim asperiores? Dicta, impedit.</b>
+            </h4>
+            <h4 class="guesstext">
+                Incorrect Guesses:
+                <b>0 / 6</b>
+            </h4>
+            <div class="keyboard">
+                <!--creating dynamically-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

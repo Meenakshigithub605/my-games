@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sofadi One;
+}
+
+body {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background: linear-gradient(#efe5e5, rgb(230 68 239 / 66%), rgb(85 48 233 / 34%), #0000ffbf);
+
+}
+
+.container {
+    width: 850px;
+    background: linear-gradient(45deg, #768bd1, white, #a9a9ef, white, transparent);
+    display: flex;
+    padding: 60px 40px;
+    border-radius: 24px;
+    align-items: flex-end;
+    gap: 70px;
+    box-shadow: 0 6px 20px;
+}
+
+.hangman-box img {
+    max-width: 270px;
+}
+
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.worddisplay {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.worddisplay .letter {
+    width: 28px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #6922ffe3;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.worddisplay .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-box h4 b {
+    font-weight: 600;
+}
+
+.game-box .guesstext b {
+    color: rgb(85, 48, 233);
+}
+
+.game-box .keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+:where(.game-modal, .keyboard) button {
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px;
+    background: linear-gradient(#bdacdfdb, rgb(177 97 182 / 88%), rgb(118 110 226 / 87%));
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.keyboard button {
+    width: calc(100%/9-5px);
+    padding: 7px;
+}
+
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+:where(.game-modal, .keyboard) button:hover {
+    background: linear-gradient(rgba(240, 251, 254, 0.974), rgba(254, 231, 255, 0.879), rgba(191, 183, 198, 0.874));
+    color: blueviolet;
+}
+
+.game-modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+    padding: 0 10px;
+}
+
+.game-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.game-modal img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.game-modal .content {
+    background: white;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-modal h4 {
+    font-size: 1.15rem;
+}
+
+.game-modal p {
+    margin: 15px 0 30px;
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+.game-modal p b {
+    color: blue;
+    font-weight: 600;
+}
+
+.game-modal button {
+    padding: 12px 23px;
+    background: linear-gradient(rgba(163, 249, 255, 0.93), rgba(56, 182, 224, 0.447), rgba(122, 139, 225, 0.836));
+    color: blueviolet;
+    outline: none;
+    border-radius: 12px;
+    font-size: 600;
+}
+
+@media (max-width:782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 50px;
+        align-items: center;
+    }
+
+    .hangman-box img {
+        max-width: 200px;
+    }
+
+    .hangman-box h1 {
+        display: none;
+    }
+}
